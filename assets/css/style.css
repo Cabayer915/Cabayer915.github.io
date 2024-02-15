@@ -18,11 +18,11 @@
    --primary-color-b: #0B0B0F;
    --primary-bg-color-b: #E9E9E9;
    --secondary-bg-color-b: #C7C8C9;
-   --border-color: #C7C8C9;
-   --title-color: #0B0B0F;
-   --text-color: #28292E;
-   --link-color: #28292E;
-   --icon-color: #56575A;
+   --border-color-b: #C7C8C9;
+   --title-color-b: #0B0B0F;
+   --text-color-b: #28292E;
+   --link-color-b: #28292E;
+   --icon-color-b: #56575A;
 }
 
 *{
@@ -38,6 +38,7 @@
 body {
     background-color: var(--primary-bg-color);
     font-family: 'League Spartan';
+    color: var(--text-color);
 }
 
 i { 
@@ -51,6 +52,12 @@ i {
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem;
+    z-index: 2;
+}
+
+.header-icon {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .header .logo .img_logo {
@@ -86,12 +93,12 @@ i {
     gap: .5rem;
 }
 
-.menu-nav-item.active {
+.menu-nav-item.active .menu-nav-link, .menu-nav-item:hover {
     color: var(--line-color);
     border-bottom: 4px solid var(--line-color);
 }
 
-.menu-icon, .menu-texto {
+.menu-icon, .menu-texto-mobile {
     color: var(--line-color);
 }
 
@@ -99,7 +106,7 @@ i {
     font-size: 1.5rem;
 }
 
-.menu-texto {
+.menu-texto-mobile {
     font-size: .75rem;
     text-transform: uppercase;
 }
@@ -108,8 +115,77 @@ i {
     width: 100%;
 }
 
+.header-nav {
+    display: none;
+}
+
 @media (min-width: 768px) {
+    .header {
+        position: fixed;
+        border-bottom: 1px solid var(--line-color);
+        padding: 1rem 6rem;
+        background-color: var(--primary-bg-color);
+    }
+
     .menu-mobile {
         display: none;
     }
+
+    .header-nav {
+        display: flex;
+    }
+
+    footer {
+        margin: 0;
+    }
 }
+
+.menu-texto {
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.menu-texto.active, .menu-texto:hover {
+    transition: all 300ms ease-in;
+    color: var(--primary-color);
+}
+
+.menu-principal {
+    gap: 1rem;
+}
+
+.header-icon {
+    min-width: 30%;
+}
+
+.header-nav {
+    min-width: 30%;
+}
+
+@media (min-width: 1400px) {
+    .header {
+        padding: 1rem 15rem;
+    }
+}
+
+footer a {
+    color: var(--text-color);
+}
+
+footer a:hover {
+    transition: all 300ms ease-in;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+footer {
+    border-top: 1px solid var(--line-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    position: fixed; /* Posição fixa para garantir que o footer seja sempre visível */
+    bottom: 0; /* Alinha o footer na parte inferior da janela */
+}
+
