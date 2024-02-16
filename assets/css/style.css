@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;400;&display=swap');
 
 :root, :root[data-theme='dark'] {
    /* TEMA ESCURO */
@@ -56,6 +56,11 @@ i {
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
 }
 
 .header-icon {
@@ -126,7 +131,6 @@ i {
 
 @media (min-width: 768px) {
     .header {
-        position: fixed;
         border-bottom: 1px solid var(--line-color);
         padding: 1rem 6rem;
         background-color: var(--primary-bg-color);
@@ -184,12 +188,106 @@ footer a:hover {
 }
 
 footer {
-    margin-top: 10%;
     border-top: 1px solid var(--line-color);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Posição fixa para garantir que o footer seja sempre visível */
+    position: fixed;
 }
 
+footer p {
+    font-size: .875rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+b {
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: 'League Spartan', sans-serif;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+}
+
+p {
+    font-size: 1.25rem;
+    text-align: justify;
+}
+
+main {
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.conteudo-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-social {
+    gap: 1rem;
+}
+
+.menu-social a i {
+    width: 128px;
+}
+
+.botao {
+    display: flex;
+    gap: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    border-radius: 3.125rem;
+    padding: 0.875rem 1rem;
+}
+
+.botao-primario {
+    border: 1px solid var(--primary-color);
+}
+
+.botao-primario span, .botao-primario i {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.conteudo-main-2 iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    z-index: 20;
+}
+
+.tecnologias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6.25rem 1rem 2rem 1rem;
+    background-color: var(--secondary-bg-color);
+    margin-top: -5.5rem;
+}
+
+.tecnologias-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.tecnologias h2 {
+    text-transform: none;
+}
