@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;400;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 :root, :root[data-theme='dark'] {
    /* TEMA ESCURO */
@@ -42,6 +42,7 @@ body {
     background-color: var(--primary-bg-color);
     font-family: 'League Spartan';
     color: var(--text-color);
+    transition: ease-in-out .3s;
 }
 
 i { 
@@ -56,6 +57,8 @@ i {
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2;
+    transition: ease-in-out .3s;
+    border-bottom: 1px solid var(--line-color);
 }
 
 .menu {
@@ -147,6 +150,34 @@ i {
     footer {
         margin: 0;
     }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .conteudo-main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 6rem 2rem 6rem;
+    }
+
+    .conteudo-main-2 {
+        padding: 0rem 6rem 0rem 6rem;
+    }
+
+    .tecnologias {
+        padding: 6.25rem 6rem 2rem 6rem;
+        margin-top: -6rem;
+    }
+
+    .tecnologias h2 {
+        padding: 0rem 6rem 0rem 6rem;
+    }
+
+    footer {
+        margin: 0;
+    }
 }
 
 .menu-texto {
@@ -161,6 +192,7 @@ i {
 
 .menu-principal {
     gap: 1rem;
+    transition: ease-in-out .3s;
 }
 
 .header-icon {
@@ -169,12 +201,6 @@ i {
 
 .header-nav {
     min-width: 30%;
-}
-
-@media (min-width: 1400px) {
-    .header {
-        padding: 1rem 15rem;
-    }
 }
 
 footer a {
@@ -193,13 +219,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    margin-bottom: 5rem;
 }
 
 footer p {
+    padding: 1rem;
     font-size: .875rem;
     text-align: center;
-    margin-bottom: 5rem;
 }
 
 h1 {
@@ -240,8 +266,8 @@ main {
     gap: 1rem;
 }
 
-.menu-social a i {
-    width: 128px;
+#icon-social {
+    height: 2rem;
 }
 
 .botao {
@@ -252,7 +278,14 @@ main {
     width: 100%;
     background: transparent;
     border-radius: 3.125rem;
-    padding: 0.875rem 1rem;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
 }
 
 .botao-primario {
@@ -278,7 +311,9 @@ main {
     justify-content: flex-start;
     padding: 6.25rem 1rem 2rem 1rem;
     background-color: var(--secondary-bg-color);
-    margin-top: -5.5rem;
+    margin-top: -7.5rem;
+    gap: 1.25rem;
+    text-align: center;
 }
 
 .tecnologias-list {
@@ -288,6 +323,44 @@ main {
     gap: .5rem;
 }
 
+.tecnologias-img {
+    height: 4rem;
+}
+
 .tecnologias h2 {
+    font-size: 2rem;
     text-transform: none;
+}
+
+@media (min-width: 1400px) {
+    p {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding: 1rem 15rem;
+    }
+
+    main {
+        padding: 8rem 10rem 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .conteudo-main .botao {
+        width: auto;
+    }
+
+    .tecnologias h2 {
+        width: 60%;
+        font-size: 3.5rem;
+    }
+
+    .tecnologias-list {
+        gap: 1rem;
+    }
+
+    .tecnologias-img {
+        height: 6rem;
+    }
 }
