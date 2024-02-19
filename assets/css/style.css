@@ -233,6 +233,11 @@ h1 {
     font-size: 2.5rem;
 }
 
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
 b {
     font-weight: 400;
 }
@@ -278,9 +283,11 @@ main {
     width: 100%;
     background: transparent;
     border-radius: 3.125rem;
+    border: none;
     padding: 0.875rem 1.5rem;
     cursor: pointer;
     transition: ease-in-out .3s;
+    color: var(--primary-color);
 }
 
 .botao:hover {
@@ -335,6 +342,57 @@ main {
 .projetos {
     display: flex;
     flex-direction: column;
+    padding: 2.5rem 1rem;
+}
+
+.div-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projetos h2 {
+    margin-bottom: 2rem;
+}
+
+.projetos .tecnologias-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.titulo-card {
+    font-size: 1.5rem;
+}
+
+.desc-card {
+    font-size: 1rem;
+    color: var(--title-color);
+}
+
+.card-botoes {
+    display: flex;
+}
+
+.img-card {
+    width: 100%;
+}
+
+.card-botoes .botao span {
+    font-size: 1.25rem;
+    text-transform: uppercase;
 }
 
 @media (min-width: 1400px) {
