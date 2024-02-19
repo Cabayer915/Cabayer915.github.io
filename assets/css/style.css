@@ -19,7 +19,7 @@
 
    --primary-color: #0B0B0F;
    --primary-bg-color: #E9E9E9;
-   --secondary-bg-color: #C7C8C9;
+   --secondary-bg-color: #9A9A9C;
    --border-color: #C7C8C9;
    --title-color: #0B0B0F;
    --text-color: #28292E;
@@ -332,6 +332,11 @@ main {
     text-transform: none;
 }
 
+.projetos {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 1400px) {
     p {
         font-size: 1.5rem;
@@ -351,9 +356,23 @@ main {
         width: auto;
     }
 
+    .tecnologias {
+        padding: 12rem 6rem 2rem 6rem;
+        margin-top: -12.5rem;
+    }
+
+    .conteudo-main h1{
+        font-size: 4rem;
+    }
+
+    #icon-social {
+        font-size: 2rem;
+    }
+
     .tecnologias h2 {
-        width: 60%;
-        font-size: 3.5rem;
+        width: 80%;
+        font-size: 3.4rem;
+        font-weight: 300;
     }
 
     .tecnologias-list {
@@ -361,6 +380,10 @@ main {
     }
 
     .tecnologias-img {
-        height: 6rem;
+        height: 4.8rem;
+    }
+
+    main {
+        padding: 2rem 8rem 2rem;
     }
 }
