@@ -132,54 +132,6 @@ i {
     display: none;
 }
 
-@media (min-width: 768px) {
-    .header {
-        border-bottom: 1px solid var(--line-color);
-        padding: 1rem 6rem;
-        background-color: var(--primary-bg-color);
-    }
-
-    .menu-mobile {
-        display: none;
-    }
-
-    .header-nav {
-        display: flex;
-    }
-
-    footer {
-        margin: 0;
-    }
-
-    h1 {
-        font-size: 5rem;
-    }
-
-    .conteudo-main {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 2rem 6rem 2rem 6rem;
-    }
-
-    .conteudo-main-2 {
-        padding: 0rem 6rem 0rem 6rem;
-    }
-
-    .tecnologias {
-        padding: 6.25rem 6rem 2rem 6rem;
-        margin-top: -6rem;
-    }
-
-    .tecnologias h2 {
-        padding: 0rem 6rem 0rem 6rem;
-    }
-
-    footer {
-        margin: 0;
-    }
-}
-
 .menu-texto {
     color: var(--text-color);
     text-transform: uppercase;
@@ -395,9 +347,74 @@ main {
     text-transform: uppercase;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+    .header {
+        border-bottom: 1px solid var(--line-color);
+        padding: 1rem 6rem;
+        background-color: var(--primary-bg-color);
+        position: fixed;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+    }
+
+    footer {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .conteudo-main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8rem 6rem 2rem 6rem;
+    }
+
+    .conteudo-main-2 {
+        padding: 0rem 6rem 0rem 6rem;
+    }
+
+    .tecnologias {
+        padding: 6.25rem 6rem 2rem 6rem;
+        margin-top: -6rem;
+    }
+
+    .projetos {
+        padding: 8rem 6rem 4rem;
+    }
+
+    .tecnologias h2 {
+        padding: 0rem 6rem 0rem 6rem;
+    }
+
+    footer {
+        margin: 0;
+    }
+}
+
 @media (min-width: 1400px) {
     p {
         font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 5rem;
     }
 
     .header {
@@ -433,6 +450,10 @@ main {
         font-weight: 300;
     }
 
+    h2 {
+        font-size: 4rem;
+    }
+
     .tecnologias-list {
         gap: 1rem;
     }
@@ -443,5 +464,29 @@ main {
 
     main {
         padding: 2rem 8rem 2rem;
+    }
+
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .img-card {
+        width: 50%;
+    }
+
+    .titulo-card {
+        font-size: 3.25rem;
+    }
+
+    .desc-card {
+        font-size: 1.25rem;
+    }
+
+    .card-botoes .botao {
+        width: auto;
+    }
+
+    .projetos .tecnologias-list {
+        gap: 0rem;
     }
 }
