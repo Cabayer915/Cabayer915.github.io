@@ -7,7 +7,8 @@
   --primary-color: #f0f0f0;
   --primary-bg-color: #111217;
   --secondary-bg-color: #28292e;
-  --border-color: #28292e;
+  --primary-border-color: #28292e;
+  --secondary-border-color: #56575a;
   --title-color: #f0f0f0;
   --text-color: #9a9a9c;
   --link-color: #9a9a9c;
@@ -21,7 +22,8 @@
   --primary-color: #0b0b0f;
   --primary-bg-color: #e9e9e9;
   --secondary-bg-color: #9a9a9c;
-  --border-color: #c7c8c9;
+  --primary-border-color: #c7c8c9;
+  --secondary-border-color: #9a9a9c;
   --title-color: #0b0b0f;
   --text-color: #28292e;
   --link-color: #28292e;
@@ -224,6 +226,11 @@ p {
   text-align: justify;
 }
 
+span,
+li {
+  font-size: 1.15rem;
+}
+
 main {
   padding: 2.5rem 2rem;
   display: flex;
@@ -276,6 +283,12 @@ main {
   font-size: 1.25rem;
 }
 
+.botao span,
+.botao i {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
 .conteudo-main-2 iframe {
   width: 100%;
   aspect-ratio: 16/9;
@@ -303,6 +316,7 @@ main {
 
 .tecnologias-img {
   height: 4rem;
+  cursor: pointer;
 }
 
 .tecnologias h2 {
@@ -433,6 +447,62 @@ html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.gaveta-header {
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--primary-border-color);
+  background-color: transparent;
+}
+
+.gaveta-header span {
+  color: var(--title-color);
+}
+
+.gaveta-body {
+  display: none;
+  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.gaveta-item.active .gaveta-body {
+  display: flex;
+}
+
+.gaveta-item.active .gaveta-header {
+  background-color: var(--secondary-bg-color);
+}
+
+.gaveta-item.active .bi-caret-down-fill {
+  transform: rotate(180deg);
+}
+
+#gaveta {
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-border-color);
+}
+
+.gaveta-header.start {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.gaveta-header.end {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.gaveta-item.active .gaveta-body.end,
+.gaveta-item.active .gaveta-body.end {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.gaveta-item.active .gaveta-header.end {
+    border-radius: 0;
 }
 
 @media (min-width: 768px) {

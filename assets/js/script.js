@@ -13,3 +13,18 @@ icon.classList.toggle("bi-sun");
 }
 
 icon.addEventListener("click", changeTheme);
+
+const gavetasHeaders = document.querySelectorAll(".gaveta-header");
+
+gavetasHeaders.forEach(header => {
+  header.addEventListener("click", () => {
+    const gavetaItem = header.parentElement;
+    const hasActiveClass = gavetaItem.classList.contains("active");
+
+    if (hasActiveClass) {
+      gavetaItem.classList.remove("active");
+    } else {
+      gavetaItem.classList.add("active");
+    }
+  });
+});
