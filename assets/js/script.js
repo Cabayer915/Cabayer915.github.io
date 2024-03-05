@@ -28,3 +28,25 @@ gavetasHeaders.forEach(header => {
     }
   });
 });
+
+const menuLinksDesktop = document.querySelectorAll(".menu-texto");
+
+menuLinksDesktop.forEach(
+    item =>{
+        item.addEventListener("click", () => {
+            menuLinksDesktop.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+        })
+    }
+)
+
+const menuLinksMobile = document.querySelectorAll(".menu-nav-item");
+
+menuLinksMobile.forEach(
+    item =>{
+        item.addEventListener("click", () => {
+            menuLinksMobile.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+        })
+    }
+)

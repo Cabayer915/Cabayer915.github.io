@@ -31,6 +31,20 @@
   --line-color: #008b8b;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--primary-bg-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--line-color);
+    border-radius: 5px;
+  }
+  
+
 * {
   margin: 0;
   padding: 0;
@@ -39,13 +53,13 @@
   list-style: none;
   font-family: "League Spartan", sans-serif;
   text-decoration: none;
+  transition: ease-in-out 0.3s;
 }
 
 body {
   background-color: var(--primary-bg-color);
   font-family: "League Spartan";
   color: var(--text-color);
-  transition: ease-in-out 0.3s;
 }
 
 i {
@@ -489,43 +503,43 @@ html {
 }
 
 .gaveta-header.start {
-    border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .gaveta-header.end {
-    border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .gaveta-item.active .gaveta-body.end,
 .gaveta-item.active .gaveta-body.end {
-    border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .gaveta-item.active .gaveta-header.end {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .contato {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    border-top: 1px solid var(--line-color);
-    padding: 2.5rem 1rem;
-  }
-  
-  .contato p {
-    text-align: center;
-  }
-  
-  .contato .botao {
-    width: auto;
-  }
-  
-  .contato .email {
-    text-transform: lowercase;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid var(--line-color);
+  padding: 2.5rem 1rem;
+}
+
+.contato p {
+  text-align: center;
+}
+
+.contato .botao {
+  width: auto;
+}
+
+.contato .email {
+  text-transform: lowercase;
+}
 
 @media (min-width: 768px) {
   .header {
@@ -606,7 +620,7 @@ html {
   }
 
   .conteudo-main h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 
   #icon-social {
