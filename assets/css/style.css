@@ -505,6 +505,28 @@ html {
     border-radius: 0;
 }
 
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--line-color);
+    padding: 2.5rem 1rem;
+  }
+  
+  .contato p {
+    text-align: center;
+  }
+  
+  .contato .botao {
+    width: auto;
+  }
+  
+  .contato .email {
+    text-transform: lowercase;
+  }
+
 @media (min-width: 768px) {
   .header {
     border-bottom: 1px solid var(--line-color);
@@ -559,6 +581,13 @@ html {
 
   .tecnologias h2 {
     padding: 0rem 6rem 0rem 6rem;
+  }
+
+  .contato {
+    padding: 6rem;
+  }
+  .contato p {
+    width: 80%;
   }
 
   footer {
