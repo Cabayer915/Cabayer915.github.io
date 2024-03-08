@@ -11,7 +11,7 @@ O projeto possui as seguintes funcionalidades básicas:
 - **Alteração de temas**: Os temas escuros e claros podem ser executados ao clicar no botão de alteração na NavBar
 chamando as funções `changeTheme` e `addEventListener` que alteram as varíaveis de cores do CSS.
 - **Agrupamento de Elementos**: O agrupamento de elementos ocorre em "Cursos" onde ao clicar em um título do Menu Gaveta
-ele pode agrupar ou desagrupar o elementos contendo a descrição do curso realizado, fazendo assim com que sejam chamadas respectivamente as funções `gavetasHeaders.forEach` em sua versão Desktop e `menuLinksDesktop.forEach` em sua versão Mobile.
+ele pode agrupar ou desagrupar os elementos contendo a descrição do curso realizado, fazendo assim com que sejam chamadas respectivamente as funções `gavetasHeaders.forEach` em sua versão Desktop e `menuLinksDesktop.forEach` em sua versão Mobile.
 - **Responsivo**: Para uma melhor visualização do Projeto, ele está responsivo para vários tipos de telas e proporções, facilitando assim a User Experience.
 
 ## Tecnologias Utilizadas
