@@ -390,6 +390,7 @@ main {
 }
 
 .img-card {
+  border-radius: 0.5rem;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -713,6 +714,8 @@ main {
   }
 
   .projetos .tecnologias-list {
+    display: flex;
+    justify-content: start;
     gap: 0rem;
   }
 
