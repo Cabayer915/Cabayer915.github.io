@@ -50,3 +50,13 @@ menuLinksMobile.forEach(
         })
     }
 )
+
+document.querySelectorAll('img').forEach(function (img) {
+  if (img.hasAttribute('data-tippy-content') && img.getAttribute('data-tippy-content').trim() !== '') {
+    tippy(img, {
+      trigger: 'click',
+      theme: 'light',
+      placement: 'bottom',
+    });
+  }
+});
